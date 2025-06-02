@@ -1,0 +1,41 @@
+CREATE TABLE brooklyn_queens_hospital_inpatient_discharges (
+    health_service_area TEXT,
+    hospital_county TEXT,
+    operating_certificate_number INT CHECK (
+        operating_certificate_number BETWEEN 1000000 AND 9999999
+    ),
+    facility_id INT CHECK (
+        facility_id BETWEEN 1000 AND 9999
+    ),
+    facility_name TEXT,
+    age_group TEXT,
+    zip_code_3_digits VARCHAR(3) CHECK (char_length(zip_code_3_digits) = 3),
+    gender CHAR(1),
+    race TEXT,
+    ethnicity TEXT,
+    length_of_stay INT,
+	length_of_stay_actual TEXT,
+    type_of_admission TEXT,
+    patient_disposition TEXT,
+    discharge_year INT,
+    ccs_diagnosis_code VARCHAR(3) CHECK (char_length(ccs_diagnosis_code) = 3),
+    ccs_diagnosis_description TEXT,
+    ccs_procedure_code VARCHAR(3) CHECK (char_length(ccs_procedure_code) = 3),
+    ccs_procedure_description TEXT,
+    apr_drg_code VARCHAR(3) CHECK (char_length(apr_drg_code) = 3),
+    apr_drg_description TEXT,
+    apr_mdc_code VARCHAR(2) CHECK (char_length(apr_mdc_code) = 2),
+    apr_mdc_description TEXT,
+    apr_severity_of_illness_code VARCHAR(1) CHECK (char_length(apr_severity_of_illness_code) = 1),
+    apr_severity_of_illness_description TEXT,
+    apr_risk_of_mortality TEXT,
+    apr_medical_surgical_description TEXT,
+    payment_typology_1 TEXT,
+    payment_typology_2 TEXT,
+    payment_typology_3 TEXT,
+    birth_weight INT,
+    abortion_edit_indicator CHAR(1),
+    emergency_department_indicator CHAR(1),
+    total_charges NUMERIC(12,2),
+    total_costs NUMERIC(12,2)
+);
