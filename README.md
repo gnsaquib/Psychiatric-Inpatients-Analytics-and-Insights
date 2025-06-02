@@ -1,4 +1,4 @@
-This project explores inpatient psychiatric care data using SQL for analysis and Tableau for visualization, with a focus on understanding patient outcomes, cost, and care patterns.
+This project explores inpatient psychiatric care data using SQL for analysis and Tableau for visualization, with a focus on understanding patient outcomes, cost, and care patterns for patients from hospitals in Brooklyn and Queens New York, in the year 2012.
 Data source: https://health.data.ny.gov/Health/Hospital-Inpatient-Discharges-SPARCS-De-Identified/u4ud-w55t/about_data
 # Key Analyses (SQL):
  * Analyzed length of stay and total cost for patients with schizophrenia spectrum and mood disorders, grouped by demographics.
